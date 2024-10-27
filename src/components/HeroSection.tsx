@@ -10,15 +10,18 @@ interface HeroSectionProps {}
 const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
     <section className="hero-section">
-      {/* Hero image */}
-      <img
-        className="hero-logo"
-        src="img/hero-logo.png"
-        alt="Hero"
-      />
+      <div>
+        <img
+          className="hero-logo"
+          src="img/hero-logo.png"
+          alt="Hero"
+        />
 
-      {/* Main title */}
-      <h1 className="hero-title">Your Path to Wellness</h1>
+        {/* Main title */}
+        <h1 className="hero-title">Zenit</h1>
+      </div>
+      {/* Hero image */}
+      
       
       {/* Subtitle */}
       <p className="hero-subtitle">
