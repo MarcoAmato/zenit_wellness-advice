@@ -1,20 +1,19 @@
 /* src/components/HeroSection.css */
 
 .hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #f5f7fa;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f5f7fa; /* Light background */
+}
+
 .hero-title {
   font-size: 2.5rem;
   font-weight: bold;
   color: #333;
-  margin-bottom: 1rem;
-  margin: 0;
+  margin: 0.5rem 0; /* Reduce margin to bring title closer to the image */
 }
 
 .hero-subtitle {
@@ -25,17 +24,20 @@
 }
 
 .hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   justify-content: center;
 }
 
 .hero-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 1rem;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem;
   color: #fff;
-  background-color: #007bff;
+  background-color: #08491e;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -43,12 +45,25 @@
 }
 
 .hero-button:hover {
-  background-color: #0056b3;
+  background-color: #1e7e5e; /* Darker blue on hover */
+}
+
+.button-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+
+.button-icon {
+  font-size: 1.5rem;
 }
 
 .hero-logo {
   width: 100%;
-  max-width: 70px;
-  margin: 0.5rem 0;
+  max-width: 100px;
+  margin: 0.5rem 0; /* Reduce margin to bring image closer to the title */
 }
-  
