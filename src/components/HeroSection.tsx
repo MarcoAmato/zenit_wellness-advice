@@ -1,59 +1,59 @@
 // src/components/HeroSection.tsx
-
 import React from 'react';
-import { FaRunning, FaAppleAlt, FaBed, FaBrain, FaUsers, FaSmile } from 'react-icons/fa'; // Import icons
-import './HeroSection.css'; // Importing CSS for styling
+import { FaRunning, FaAppleAlt, FaBed, FaBrain, FaUsers, FaSmile, FaUserFriends, FaTools } from 'react-icons/fa';
+import './HeroSection.css';
 
-interface HeroSectionProps {}
-
-// HeroSection component
-const HeroSection: React.FC<HeroSectionProps> = () => {
+const HeroSection: React.FC = () => {
   return (
     <section className="hero-section">
       {/* Logo and title */}
-      <div>
-        {/* Logo */}
+      <div className="hero-header">
         <img
           className="hero-logo"
           src="img/hero-logo.png"
-          alt="Hero"
+          alt="Zenit Logo"
         />
-
-        {/* Main title */}
         <h1 className="hero-title">Zenit</h1>
       </div>
 
-      {/* Subtitle */}
-      <p className="hero-subtitle">
-        Discover science-backed insights for a healthier, more fulfilling life.
-      </p>
-      
-      {/* Navigation buttons */}
+      {/* Main buttons */}
       <div className="hero-buttons">
-        <button className="hero-button">
-          <FaRunning className="button-icon" /> {/* Exercise Icon */}
-          Exercise
-        </button>
-        <button className="hero-button">
-          <FaAppleAlt className="button-icon" /> {/* Nutrition Icon */}
-          Nutrition
-        </button>
-        <button className="hero-button">
-          <FaBed className="button-icon" /> {/* Sleep Icon */}
-          Sleep
-        </button>
-        <button className="hero-button">
-          <FaBrain className="button-icon" /> {/* Mindset Icon */}
-          Mindset
-        </button>
-        <button className="hero-button">
-          <FaUsers className="button-icon" /> {/* Social Relationships Icon */}
-          Social Relationships
-        </button>
-        <button className="hero-button">
-          <FaSmile className="button-icon" /> {/* Stress Management Icon */}
-          Stress Management
-        </button>
+        <div className="hero-button">
+          <div className="icon-background"><FaAppleAlt className="button-icon" /></div>
+          <p>Nutrition</p>
+        </div>
+        <div className="hero-button">
+          <div className="icon-background"><FaRunning className="button-icon" /></div>
+          <p>Exercise</p>
+        </div>
+        <div className="hero-button">
+          <div className="icon-background"><FaBrain className="button-icon" /></div>
+          <p>Mindset</p>
+        </div>
+        <div className="hero-button">
+          <div className="icon-background"><FaBed className="button-icon" /></div>
+          <p>Sleep</p>
+        </div>
+        <div className="hero-button">
+          <div className="icon-background"><FaUsers className="button-icon" /></div>
+          <p>Social Connections</p>
+        </div>
+        <div className="hero-button">
+          <div className="icon-background"><FaSmile className="button-icon" /></div>
+          <p>Stress Management</p>
+        </div>
+      </div>
+
+      {/* Bottom buttons */}
+      <div className="bottom-buttons">
+        <div className="bottom-button">
+          <FaUserFriends className="bottom-button-icon" />
+          <p>Communities</p>
+        </div>
+        <div className="bottom-button">
+          <FaTools className="bottom-button-icon" />
+          <p>Expert Services</p>
+        </div>
       </div>
     </section>
   );
