@@ -1,0 +1,32 @@
+.specific-section {
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+
+  .divQuestion {
+    margin-top: 50px;
+    border: 1px solid black; /* Bordo nero di 1px */
+    outline: 2px solid green; /* Contorno verde */
+    background-color: white; /* Sfondo bianco */
+    margin: auto; /* Centro orizzontale */
+    display: flex; /* Layout flessibile per il posizionamento delle colonne */
+    padding: 10px; /* Spaziatura interna */
+    box-sizing: border-box; /* Include padding nel calcolo della larghezza */
+}
+
+/* Colonna destra con il testo */
+.col-right {
+     /* Prende il 75% dello spazio */
+    padding: 10px;
+}
+
+/* Colonna sinistra con l'icona */
+.col-left {
+     /* Prende il 25% dello spazio */
+    display: flex; /* Centra il contenuto verticalmente e orizzontalmente */
+    justify-content: center;
+    align-items: center;
+    font-size: 48px; /* Dimensione dell'icona */
+}
+
