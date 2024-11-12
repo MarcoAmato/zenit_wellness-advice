@@ -1,0 +1,8 @@
+hr {
+    height: 4px;
+    background-color: black;
+    width: 100vw;
+    position: relative;
+    left: 50%; /* Sposta la linea verso sinistra */
+    transform: translateX(-50%); /* Centra la linea rispetto alla viewport */
+}

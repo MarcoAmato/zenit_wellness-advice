@@ -2,11 +2,12 @@ import React from 'react';
 import { FaRunning, FaAppleAlt, FaBed, FaBrain, FaUsers, FaSmile, FaUserFriends, FaTools, FaQuestion } from 'react-icons/fa';
 import './HeroSection.css';
 import './SpecificSection.css';
+import './QuestionSection.css';
 import { Col, Container, Row } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
-const SpecificSection: React.FC = () => {
+const QuestionSection: React.FC = () => {
     return (
         <section className="specific-section">
 
@@ -19,7 +20,6 @@ const SpecificSection: React.FC = () => {
                         </div>
                     </Col>
                     <Col className='marginCol' lg="12">
-                        <Link to="/questionsection" style={{ textDecoration: 'none', color: 'inherit' }}>
                             <div className="divQuestion">
                                 <div className="col-left">
                                     <p>How important is fiber intake in the diet?</p>
@@ -28,7 +28,9 @@ const SpecificSection: React.FC = () => {
                                     <FaQuestion className="button-icon" />
                                 </div>
                             </div>
-                        </Link>
+                    </Col>
+                    <Col className='marginCol' lg="12">
+                           <hr></hr>
                     </Col>
                 </Row>
             </Container>
@@ -37,4 +39,4 @@ const SpecificSection: React.FC = () => {
     );
 };
 
-export default SpecificSection;
+export default QuestionSection;
