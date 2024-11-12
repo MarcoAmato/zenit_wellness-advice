@@ -4,7 +4,7 @@
   text-align: center;
 }
 
-.bold{
+.bold {
   font-weight: bold;
 }
 
@@ -28,9 +28,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   color: #333;
   margin-top: 25px;
+  text-align: center;
 }
 
 .icon-background {
@@ -86,10 +86,8 @@
 }
 
 .divQuestion {
-  margin-top: 50px;
   outline: 2px solid #b7eb41;
   background-color: white;
-  margin: auto;
   display: flex;
   padding: 10px;
   box-sizing: border-box;
@@ -98,22 +96,12 @@
   width: 100%;
 }
 
-.marginCol{
-  margin-top: 20px;
-}
-
-.col-left p {
+.divQuestion p {
   margin: 0;
-  font-size: 0.4em;
 }
 
-.col-right .button-icon {
-  font-size: 1.5em;
-  color: #333;   
-}
-
-.col-right {
-  padding: 10px;
+.marginCol {
+  margin-top: 20px !important;
 }
 
 .col-left {
@@ -121,6 +109,20 @@
   justify-content: center;
   align-items: center;
   font-size: 48px;
+}
+
+.col-left p {
+  margin: 0;
+  font-size: 0.4em;
+}
+
+.col-right {
+  padding: 10px;
+}
+
+.col-right .button-icon {
+  font-size: 1.5em;
+  color: #333;
 }
 
 hr {
@@ -132,29 +134,23 @@ hr {
   transform: translateX(-50%);
 }
 
-.references{
-text-align: left;
-font-size: larger;
-font-weight: bold;
+.references {
+  text-align: left;
+  font-size: larger;
+  font-weight: bold;
 }
 
+/* Media Queries */
 @media (min-width: 768px) {
   .hero-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: #333;
     margin-top: 60px;
   }
 
   .bottom-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
     margin-top: 80px;
     margin-bottom: 50px;
   }
 }
+
 
 
