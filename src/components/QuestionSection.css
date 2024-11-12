@@ -6,3 +6,9 @@ hr {
     left: 50%; /* Sposta la linea verso sinistra */
     transform: translateX(-50%); /* Centra la linea rispetto alla viewport */
 }
+
+.references{
+ text-align: left;
+ font-size: larger;
+ font-weight: bold;
+}

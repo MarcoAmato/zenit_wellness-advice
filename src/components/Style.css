@@ -1,9 +1,11 @@
-/* src/components/HeroSection.css */
-
 .hero-section {
   padding: 20px;
   background-color: #f5f5f5;
   text-align: center;
+}
+
+.bold{
+  font-weight: bold;
 }
 
 .hero-header {
@@ -44,7 +46,7 @@
 
 .button-icon {
   font-size: 2em;
-  color: #4caf50; /* Icon color */
+  color: #4caf50;
 }
 
 .hero-button p {
@@ -52,7 +54,6 @@
   margin: 0;
 }
 
-/* Bottom buttons styling */
 .bottom-buttons {
   display: flex;
   justify-content: center;
@@ -78,6 +79,65 @@
   margin: 0;
 }
 
+.specific-section {
+  padding: 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.divQuestion {
+  margin-top: 50px;
+  outline: 2px solid #b7eb41;
+  background-color: white;
+  margin: auto;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.marginCol{
+  margin-top: 20px;
+}
+
+.col-left p {
+  margin: 0;
+  font-size: 0.4em;
+}
+
+.col-right .button-icon {
+  font-size: 1.5em;
+  color: #333;   
+}
+
+.col-right {
+  padding: 10px;
+}
+
+.col-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+}
+
+hr {
+  height: 4px;
+  background-color: black;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.references{
+text-align: left;
+font-size: larger;
+font-weight: bold;
+}
+
 @media (min-width: 768px) {
   .hero-button {
     display: flex;
@@ -96,3 +156,5 @@
     margin-bottom: 50px;
   }
 }
+
+
