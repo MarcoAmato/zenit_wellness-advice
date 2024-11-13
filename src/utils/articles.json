@@ -1,0 +1,85 @@
+{
+    "sections": [
+      {
+        "name": "Sport",
+        "articles": [
+          {
+            "title": "What are the benefits of creatine supplementation in athletes?",
+            "body": "Creatine is a safe and widely used supplement to improve performance in sports that require explosiveness, such as weightlifting and sprinting. Several studies show that creatine supplementation does not cause kidney damage in healthy subjects and can increase strength and muscle mass.",
+            "sources": [
+              {
+                "sourceTitle": "BioMed Central",
+                "sourceLink": "https://jissn.biomedcentral.com/articles/10.1186/s12970-021-00412-w"
+              }
+            ]
+          },
+          {
+            "title": "Is hydration crucial during exercise?",
+            "body": "Recommendations on fluid intake for endurance athletes have evolved. The theory held was that 'once you are thirsty you are already dehydrated.' However, such a view poses a health risk to athletes who, in an attempt to prevent dehydration, drink excessively, exposing themselves to hyponatremia. Today, it is recommended to follow the instinctive mechanism of thirst and monitor body parameters such as body weight and urine color.",
+            "sources": [
+              {
+                "sourceTitle": "MDPI",
+                "sourceLink": "https://www.mdpi.com/2072-6643/11/6/1289"
+              }
+            ]
+          },
+          {
+            "title": "What are the effects of caffeine on sports performance?",
+            "body": "Caffeine can improve performance by increasing concentration and reducing the perception of fatigue. It promotes physical performance. A moderate dose of 3-6 mg/kg 30-90 minutes before exercise is recommended to maximize effects.",
+            "sources": [
+              {
+                "sourceTitle": "MDPI",
+                "sourceLink": "https://www.mdpi.com/2072-6643/11/6/1289"
+              }
+            ]
+          },
+          {
+            "title": "How does exercise help mental health?",
+            "body": "Physical activity releases endorphins, which improve mood and reduce anxiety and depression. Moderate exercise, such as walking, also has positive effects.",
+            "sources": [
+              {
+                "sourceTitle": "Harvard Health - Exercise and Mental Health",
+                "sourceLink": "https://www.health.harvard.edu/mind-and-mood/exercise-is-an-all-natural-treatment-to-fight-depression"
+              }
+            ]
+          },
+          {
+            "title": "What is the role of muscle strength in healthy aging?",
+            "body": "Resistance exercises help maintain muscle mass and bone density, reducing the risk of falls and osteoporosis in the elderly.",
+            "sources": [
+              {
+                "sourceTitle": "Harvard Health - Strength Training",
+                "sourceLink": "https://www.health.harvard.edu/staying-healthy/strength-training-builds-more-than-muscles"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nutrition",
+        "articles": [
+          {
+            "title": "How important is fiber intake in the diet?",
+            "body": "Fiber is essential for good digestion and for preventing chronic diseases such as type 2 diabetes. Fiber is found mainly in whole foods, fruits, and vegetables.",
+            "sources": [
+              {
+                "sourceTitle": "Harvard Nutrition Source - Fiber",
+                "sourceLink": "https://www.hsph.harvard.edu/nutrition-source/fiber/"
+              }
+            ]
+          },
+          {
+            "title": "How many and what carbohydrates should you eat?",
+            "body": "In the absence of diabetes, there is no real need to monitor carbohydrate intake strictly. Instead, focus on portion size, aiming for a fist-sized portion of carbohydrate-rich foods, and include fiber for quality.",
+            "sources": [
+              {
+                "sourceTitle": "Harvard Health Publishing",
+                "sourceLink": "https://www.health.harvard.edu/heart-health/carbs-cutting-through-the-confusion"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
