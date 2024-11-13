@@ -3,17 +3,21 @@ import { FaRunning, FaAppleAlt, FaBed, FaBrain, FaUsers, FaSmile, FaUserFriends,
 import './Style.css';
 import { Col, Container, Row } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { getArticlesByPillar } from '../utils/dataUtils';
 import { Article } from '../utils/types';
 
 const SpecificSection: React.FC = () => {
     const [articles, setArticles] = useState<Article[]>([]);
+    const location = useLocation();
 
     useEffect(() => {
-        const fetchedArticles = getArticlesByPillar('nutrition'); // Change 'nutrition' to the desired pillar
+        const params = new URLSearchParams(location.search);
+        const pillar = params.get('pillar') || 'nutrition'; // Default to 'nutrition' if no pillar is specified
+        console.log(`Pillar clicked: ${pillar}`);
+        const fetchedArticles = getArticlesByPillar(pillar);
         setArticles(fetchedArticles);
-    }, []);
+    }, [location]);
 
     return (
         <section className="specific-section">
