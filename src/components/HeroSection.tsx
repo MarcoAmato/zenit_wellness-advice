@@ -36,7 +36,7 @@ const HeroSection: React.FC = () => {
             <Link to="/specificsection?pillar=exercise" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="hero-button">
                 <div className="icon-background"><FaRunning className="button-icon" /></div>
-                <p className='bold'>Exercise</p>
+                <p className='bold'>Sport</p>
               </div>
             </Link>
           </Col>
