@@ -3,8 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HeroSection from './components/HeroSection';
 import SpecificSection from './components/SpecificSection';
-import QuestionSection from './components/QuestionSection';
-
+import ArticleDetails from './components/ArticleDetails'; // Updated import
 
 const App: React.FC = () => {
   return (
@@ -13,7 +12,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<HeroSection />} />
           <Route path="/specificsection" element={<SpecificSection />} />
-          <Route path="/questionsection" element={<QuestionSection />} />
+          <Route path="/article-details" element={<ArticleDetails />} /> {/* Updated route */}
         </Routes>
       </Router>
     </div>

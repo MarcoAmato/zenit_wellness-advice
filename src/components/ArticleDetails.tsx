@@ -1,26 +1,31 @@
 import React from 'react';
-import { FaRunning, FaAppleAlt, FaBed, FaBrain, FaUsers, FaSmile, FaUserFriends, FaTools, FaQuestion } from 'react-icons/fa';
+import { FaQuestion } from 'react-icons/fa';
 import './Style.css';
 import { Col, Container, Row } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { Article } from '../utils/types';
 
-const QuestionSection: React.FC = () => {
+const ArticleDetails: React.FC = () => {
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+    const title = params.get('title') || 'Article Title';
+    const body = params.get('body') || 'Article Body';
+
     return (
         <section className="specific-section">
-
             <Container>
                 <Row>
                     <Col lg="12">
                         <div className="hero-button">
-                            <div className="icon-background"><FaAppleAlt className="button-icon" /></div>
-                            <p className='bold'>Nutrition</p>
+                            <div className="icon-background"><FaQuestion className="button-icon" /></div>
+                            <p className='bold'>{title}</p>
                         </div>
                     </Col>
                     <Col className='marginCol' lg="12">
                         <div className="divQuestion">
                             <div className="col-left">
-                                <p>How important is fiber intake in the diet</p>
+                                <p>{title}</p>
                             </div>
                             <div className="col-right">
                                 <FaQuestion className="button-icon" />
@@ -32,24 +37,13 @@ const QuestionSection: React.FC = () => {
                     </Col>
                     <Col className='marginCol' lg="12">
                         <div className="divQuestion">
-                            <p>Fiber is essential for good digestion and for preventing chronic diseases such as type 2 diabetes. They are found mainly in whole foods, fruits and vegetables.</p>
-                        </div>
-                    </Col>
-                    <Col className='marginCol' lg="12">
-                        <div>
-                            <p className='references'>References</p>
-                        </div>
-                    </Col>
-                    <Col lg="12">
-                        <div className="divQuestion">
-                            <p>Harvard Nutrition Source - Fiber</p>
+                            <p>{body}</p>
                         </div>
                     </Col>
                 </Row>
             </Container>
-
         </section>
     );
 };
 
-export default QuestionSection;
+export default ArticleDetails;
