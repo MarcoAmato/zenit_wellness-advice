@@ -15,6 +15,10 @@ const pillarNameMap: { [key: string]: string } = {
   'expert-services': 'Expert Services'
 };
 
+export const getPillarKeyByValue = (value: string): string | undefined => {
+  return Object.keys(pillarNameMap).find(key => pillarNameMap[key] === value);
+};
+
 /**
  * Get all available pillars from the data source in the JSON file.
  * @returns List of available pillars
