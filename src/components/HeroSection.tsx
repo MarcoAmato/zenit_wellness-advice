@@ -9,22 +9,12 @@ import { Link } from 'react-router-dom';
 const HeroSection: React.FC = () => {
   return (
     <section className="hero-section">
-      {/* Logo and title */}
-      <div className="hero-header">
-        <img
-          className="hero-logo"
-          src="img/hero-logo.png"
-          alt="Zenit Logo"
-        />
-        <h1 className="hero-title">Zenit</h1>
-      </div>
-
       {/* Main buttons */}
       <Container>
         <Row>
 
         <Col md="4" sm="6" xs="6">
-            <Link to="/specificsection?pillar=nutrition" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link to="/pillar-articles?pillar=nutrition" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="hero-button">
                 <div className="icon-background"><FaAppleAlt className="button-icon" /></div>
                 <p className='bold'>Nutrition</p>
@@ -33,7 +23,7 @@ const HeroSection: React.FC = () => {
           </Col>
 
           <Col md="4" sm="6" xs="6">
-            <Link to="/specificsection?pillar=exercise" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link to="/pillar-articles?pillar=exercise" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="hero-button">
                 <div className="icon-background"><FaRunning className="button-icon" /></div>
                 <p className='bold'>Sport</p>
@@ -42,7 +32,7 @@ const HeroSection: React.FC = () => {
           </Col>
 
           <Col md="4" sm="6" xs="6">
-            <Link to="/specificsection?pillar=mindset" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link to="/pillar-articles?pillar=mindset" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="hero-button">
                 <div className="icon-background"><FaBrain className="button-icon" /></div>
                 <p className='bold'>Mindset</p>
@@ -51,7 +41,7 @@ const HeroSection: React.FC = () => {
           </Col>
 
           <Col md="4" sm="6" xs="6">
-            <Link to="/specificsection?pillar=sleep" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link to="/pillar-articles?pillar=sleep" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="hero-button">
                 <div className="icon-background"><FaBed className="button-icon" /></div>
                 <p className='bold'>Sleep</p>
@@ -60,7 +50,7 @@ const HeroSection: React.FC = () => {
           </Col>
 
           <Col md="4" sm="6" xs="6">
-            <Link to="/specificsection?pillar=social-connections" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link to="/pillar-articles?pillar=social-connections" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="hero-button">
                 <div className="icon-background"><FaUsers className="button-icon" /></div>
                 <p className='bold'>Social Connections</p>
@@ -69,7 +59,7 @@ const HeroSection: React.FC = () => {
           </Col>
 
           <Col md="4" sm="6" xs="6">
-            <Link to="/specificsection?pillar=stress-management" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link to="/pillar-articles?pillar=stress-management" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="hero-button">
                 <div className="icon-background"><FaSmile className="button-icon" /></div>
                 <p className='bold'>Stress Management</p>
