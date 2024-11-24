@@ -6,6 +6,7 @@ export interface Source {
 }
 
 export interface Article {
+  id: number;
   title: string;
   body: string;
   sources: Source[];

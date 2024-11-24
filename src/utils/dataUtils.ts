@@ -1,24 +1,6 @@
 import articlesData from './articles.json';
 
-interface Source {
-  sourceTitle: string;
-  sourceLink: string;
-}
-
-interface Article {
-  title: string;
-  body: string;
-  sources: Source[];
-}
-
-interface Section {
-  name: string;
-  articles: Article[];
-}
-
-interface ArticlesData {
-  sections: Section[];
-}
+import { Article, ArticlesData } from './types';
 
 const data: ArticlesData = articlesData;
 
@@ -63,4 +45,20 @@ export const getArticlesByPillar = (pillar: string): { articles: Article[], disp
     return { articles: [], displayName: '' };
   }
   return { articles: section.articles, displayName: section.name };
+};
+
+/**
+ * Get an article by its ID.
+ * 
+ * @param id ID of the article to retrieve
+ * @returns Article with the given ID if it exists, otherwise undefined
+ */
+export const getArticleById = (id: number): Article | undefined => {
+  for (const section of data.sections) {
+    const article = section.articles.find(article => article.id === id);
+    if (article) {
+      return article;
+    }
+  }
+  return undefined;
 };

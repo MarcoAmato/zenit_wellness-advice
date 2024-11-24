@@ -39,7 +39,7 @@ const SpecificSection: React.FC = () => {
                     </Col>
                     {Array.isArray(articles) && articles.map((article, index) => (
                         <Col key={index} className="marginCol" lg="12">
-                            <Link to={`/article-details?title=${encodeURIComponent(article.title)}&body=${encodeURIComponent(article.body)}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <Link to={`/article-details?id=${article.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                                 <div className="divQuestion">
                                     <div className="col-left">
                                         <p>{article.title}</p>
