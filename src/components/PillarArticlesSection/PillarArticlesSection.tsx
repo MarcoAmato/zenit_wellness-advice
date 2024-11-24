@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { FaQuestion } from 'react-icons/fa';
-import { IconType } from 'react-icons';
-import './Style.css';
-import { Col, Container, Row } from 'reactstrap';
+import '../Style.css';
+import './PillarArticlesSection.css';
+import '../CommonStyles.css'; // Import the common styles
+import { Col, Container, Row, Card, CardBody, CardTitle, CardText } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, useLocation } from 'react-router-dom';
-import { getArticlesByPillar } from '../utils/dataUtils';
-import { getIconByPillar } from '../utils/iconUtils';
-import { Article } from '../utils/types';
+import { getArticlesByPillar } from '../../utils/dataUtils';
+import { getIconByPillar } from '../../utils/iconUtils';
+import { Article } from '../../utils/types';
+import { IconType } from 'react-icons';
 
 const PillarArticlesSection: React.FC = () => {
     const [articles, setArticles] = useState<Article[]>([]);
@@ -26,7 +28,7 @@ const PillarArticlesSection: React.FC = () => {
     }, [location]);
 
     return (
-        <section className="specific-section">
+        <section className="pillar-articles-section">
             <Container>
                 <Row>
                     <Col lg="12">
@@ -38,16 +40,22 @@ const PillarArticlesSection: React.FC = () => {
                         </div>
                     </Col>
                     {Array.isArray(articles) && articles.map((article, index) => (
-                        <Col key={index} className="marginCol" lg="12">
+                        <Col key={index} className="marginCol" lg="6" md="12">
                             <Link to={`/article-details?id=${article.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                <div className="divQuestion">
-                                    <div className="col-left">
-                                        <p>{article.title}</p>
-                                    </div>
-                                    <div className="col-right">
-                                        <FaQuestion className="button-icon" />
-                                    </div>
-                                </div>
+                                <Card className="pillar-card">
+                                    <CardBody>
+                                        <div className="card-header">
+                                            <div className="card-title-container">
+                                                <CardTitle tag="h2" className="card-title-common">{article.title}</CardTitle>
+                                            </div>
+                                            <div className="icon-container">
+                                                <div className="icon-background">
+                                                    <FaQuestion className="button-icon" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </CardBody>
+                                </Card>
                             </Link>
                         </Col>
                     ))}

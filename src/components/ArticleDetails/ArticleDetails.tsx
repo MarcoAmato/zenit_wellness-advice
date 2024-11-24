@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaQuestion, FaExternalLinkAlt } from 'react-icons/fa';
 import '../Style.css';
+import '../CommonStyles.css';
 import "./ArticleDetails.css";
 import { Col, Container, Row, Card, CardBody, CardTitle, CardText } from 'reactstrap';
 import SourceList from '../ArticleDetails/SourceList';
@@ -48,7 +49,7 @@ const ArticleDetails: React.FC = () => {
                     <Col className='marginCol' lg="12">
                         <Card className="article-card">
                             <CardBody>
-                                <CardTitle tag="h2">{article.title}</CardTitle>
+                                <CardTitle tag="h2" className='card-title-common'>{article.title}</CardTitle>
                                 <CardText>{article.body}</CardText>
                             </CardBody>
                         </Card>
