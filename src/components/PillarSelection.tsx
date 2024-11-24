@@ -6,7 +6,7 @@ import { Col, Container, Row } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
-const HeroSection: React.FC = () => {
+const PillarSelectionSection: React.FC = () => {
   return (
     <section className="hero-section">
       {/* Main buttons */}
@@ -84,4 +84,4 @@ const HeroSection: React.FC = () => {
   );
 };
 
-export default HeroSection;
+export default PillarSelectionSection;
