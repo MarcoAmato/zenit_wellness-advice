@@ -4,13 +4,16 @@ import './Style.css';
 import { Col, Container, Row } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useLocation } from 'react-router-dom';
-import { getArticleById } from '../utils/dataUtils';
+import { getArticleById, getPillarByArticleId } from '../utils/dataUtils';
+import { getIconByPillar } from '../utils/iconUtils';
 
 const ArticleDetails: React.FC = () => {
     const location = useLocation();
     const params = new URLSearchParams(location.search);
     const id = parseInt(params.get('id') || "-1");
     const article = getArticleById(id);
+    const pillar = getPillarByArticleId(id);
+    const IconComponent = getIconByPillar(pillar || '');
 
     if(!article) {
         return (
@@ -34,8 +37,10 @@ const ArticleDetails: React.FC = () => {
                     <Row>
                         <Col lg="12">
                             <div className="hero-button">
-                                <div className="icon-background"><FaQuestion className="button-icon" /></div>
-                                <p className='bold'>{article.title}</p>
+                                <div className="icon-background">
+                                    <IconComponent className="button-icon" />
+                                </div>
+                                <p className='bold'>{pillar}</p>
                             </div>
                         </Col>
                         <Col className='marginCol' lg="12">

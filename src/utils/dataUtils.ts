@@ -62,3 +62,13 @@ export const getArticleById = (id: number): Article | undefined => {
   }
   return undefined;
 };
+
+export const getPillarByArticleId = (id: number): string | undefined => {
+  for (const section of data.sections) {
+    const article = section.articles.find(article => article.id === id);
+    if (article) {
+      return section.name;
+    }
+  }
+  return undefined;
+}
