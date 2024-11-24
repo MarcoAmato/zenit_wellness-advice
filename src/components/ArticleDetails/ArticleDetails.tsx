@@ -2,7 +2,7 @@ import React from 'react';
 import { FaQuestion, FaExternalLinkAlt } from 'react-icons/fa';
 import '../Style.css';
 import "./ArticleDetails.css";
-import { Col, Container, Row } from 'reactstrap';
+import { Col, Container, Row, Card, CardBody, CardTitle, CardText } from 'reactstrap';
 import SourceList from '../ArticleDetails/SourceList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useLocation } from 'react-router-dom';
@@ -46,22 +46,12 @@ const ArticleDetails: React.FC = () => {
                         </div>
                     </Col>
                     <Col className='marginCol' lg="12">
-                        <div className="divQuestion">
-                            <div className="col-left">
-                                <p>{article.title}</p>
-                            </div>
-                            <div className="col-right">
-                                <IconComponent className="button-icon" />
-                            </div>
-                        </div>
-                    </Col>
-                    <Col className='marginCol' lg="12">
-                        <hr></hr>
-                    </Col>
-                    <Col className='marginCol' lg="12">
-                        <div className="divQuestion">
-                            <p>{article.body}</p>
-                        </div>
+                        <Card className="article-card">
+                            <CardBody>
+                                <CardTitle tag="h2">{article.title}</CardTitle>
+                                <CardText>{article.body}</CardText>
+                            </CardBody>
+                        </Card>
                     </Col>
                     <Col className='marginCol' lg="12">
                         <SourceList sources={article.sources} />
