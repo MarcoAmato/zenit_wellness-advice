@@ -9,7 +9,7 @@ import { getArticlesByPillar } from '../utils/dataUtils';
 import { getIconByPillar } from '../utils/iconUtils';
 import { Article } from '../utils/types';
 
-const SpecificSection: React.FC = () => {
+const PillarArticlesSection: React.FC = () => {
     const [articles, setArticles] = useState<Article[]>([]);
     const [displayName, setDisplayName] = useState<string>('Nutrition');
     const [IconComponent, setIconComponent] = useState<IconType>(() => FaQuestion);
@@ -57,4 +57,4 @@ const SpecificSection: React.FC = () => {
     );
 };
 
-export default SpecificSection;
+export default PillarArticlesSection;
