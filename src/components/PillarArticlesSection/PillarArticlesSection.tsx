@@ -41,25 +41,26 @@ const PillarArticlesSection: React.FC = () => {
                     </Col>
                     {Array.isArray(articles) && articles.map((article, index) => (
                         <Col key={index} className="marginCol" lg="6" md="12">
-                            <Link to={`/article-details?id=${article.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                <Card className="pillar-card">
-                                    <CardBody>
-                                        <div className="card-header">
-                                            <div className="card-title-container">
-                                                <CardTitle tag="h2" className="card-title-common">{article.title}</CardTitle>
-                                            </div>
-                                            <div className="icon-container">
-                                                {/*<div className="icon-background">
+                            <Card className="pillar-card">
+                                <CardBody>
+                                    <div className="card-header">
+                                        <div className="card-title-container">
+                                            <CardTitle tag="h2" className="card-title-common">{article.title}</CardTitle>
+                                        </div>
+                                        <div className="icon-container">
+                                            {/*<div className="icon-background">
                                                     <FaQuestion className="button-icon" />
                                                 </div> */}
-                                            </div>
-                                            <Button color="success">
-                                                success
-                                            </Button>
                                         </div>
-                                    </CardBody>
-                                </Card>
-                            </Link>
+                                        <Link to={`/article-details?id=${article.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                            <Button color="success">
+                                                View Details
+                                            </Button>
+                                        </Link>
+                                    </div>
+                                </CardBody>
+                            </Card>
+
                         </Col>
                     ))}
                 </Row>
