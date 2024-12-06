@@ -3,7 +3,7 @@ import { FaQuestion } from 'react-icons/fa';
 import '../Style.css';
 import './PillarArticlesSection.css';
 import '../CommonStyles.css'; // Import the common styles
-import { Col, Container, Row, Card, CardBody, CardTitle, CardText } from 'reactstrap';
+import { Col, Container, Row, Card, CardBody, CardTitle, CardText, Button } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, useLocation } from 'react-router-dom';
 import { getArticlesByPillar } from '../../utils/dataUtils';
@@ -49,10 +49,13 @@ const PillarArticlesSection: React.FC = () => {
                                                 <CardTitle tag="h2" className="card-title-common">{article.title}</CardTitle>
                                             </div>
                                             <div className="icon-container">
-                                                <div className="icon-background">
+                                                {/*<div className="icon-background">
                                                     <FaQuestion className="button-icon" />
-                                                </div>
+                                                </div> */}
                                             </div>
+                                            <Button color="success">
+                                                success
+                                            </Button>
                                         </div>
                                     </CardBody>
                                 </Card>
