@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { FaQuestion } from 'react-icons/fa';
+import { FaArrowLeft, FaQuestion } from 'react-icons/fa';
 import '../Style.css';
 import './PillarArticlesSection.css';
 import '../CommonStyles.css'; // Import the common styles
 import { Col, Container, Row, Card, CardBody, CardTitle, CardText, Button } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { getArticlesByPillar } from '../../utils/dataUtils';
 import { getIconByPillar } from '../../utils/iconUtils';
 import { Article } from '../../utils/types';
@@ -16,6 +16,11 @@ const PillarArticlesSection: React.FC = () => {
     const [displayName, setDisplayName] = useState<string>('Nutrition');
     const [IconComponent, setIconComponent] = useState<IconType>(() => FaQuestion);
     const location = useLocation();
+
+    const navigate = useNavigate();
+    const handleGoBack = () => {
+        navigate(-1); // This will navigate back to the previous page
+    };
 
     useEffect(() => {
         const params = new URLSearchParams(location.search);
@@ -32,6 +37,9 @@ const PillarArticlesSection: React.FC = () => {
             <Container>
                 <Row>
                     <Col lg="12">
+                        <Button color="link" onClick={handleGoBack} className="go-back-button">
+                            <FaArrowLeft /> Go Back
+                        </Button>
                         <div className="hero-button">
                             <div className="icon-background">
                                 {IconComponent && <IconComponent className="button-icon" />}
@@ -41,31 +49,27 @@ const PillarArticlesSection: React.FC = () => {
                     </Col>
                     {Array.isArray(articles) && articles.map((article, index) => (
                         <Col key={index} className="marginCol" lg="6" md="12">
-                            <Card className="pillar-card">
-                                <CardBody>
-                                    <div className="card-header">
-                                        <div className="card-title-container">
-                                            <CardTitle tag="h2" className="card-title-common">{article.title}</CardTitle>
+                            <Link to={`/article-details?id=${article.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                <Card className="pillar-card">
+                                    <CardBody>
+                                        <div className="card-header">
+                                            <div className="card-title-container">
+                                                <CardTitle tag="h2" className="card-title-common">{article.title}</CardTitle>
+                                            </div>
+                                            <div className="icon-container">
+                                                <Button className='buttonArticle'>
+                                                    View Details
+                                                </Button>
+                                            </div>
                                         </div>
-                                        <div className="icon-container">
-                                            {/*<div className="icon-background">
-                                                    <FaQuestion className="button-icon" />
-                                                </div> */}
-                                        </div>
-                                        <Link to={`/article-details?id=${article.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                            <Button color="success">
-                                                View Details
-                                            </Button>
-                                        </Link>
-                                    </div>
-                                </CardBody>
-                            </Card>
-
+                                    </CardBody>
+                                </Card>
+                            </Link>
                         </Col>
                     ))}
                 </Row>
             </Container>
-        </section>
+        </section >
     );
 };
 

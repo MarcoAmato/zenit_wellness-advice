@@ -31,14 +31,14 @@ const Footer: React.FC = () => {
                     <a href="/privacy-policy">Privacy Policy</a>
                     <a href="/terms-of-service">Terms of Service</a>
                 </div>
-                <div className="footer-section">
+{/*                 <div className="footer-section">
                     <h4>Newsletter</h4>
                     <p>Sign up for our newsletter to stay updated.</p>
                     <form>
                         <input type="email" placeholder="Your email" />
                         <button type="submit">Subscribe</button>
                     </form>
-                </div>
+                </div> */}
             </div>
             <div className="footer-bottom">
                 <p>&copy; {new Date().getFullYear()} Zenit Wellness. All rights reserved.</p>
