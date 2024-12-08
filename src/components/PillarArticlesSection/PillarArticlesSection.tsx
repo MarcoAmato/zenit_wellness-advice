@@ -10,6 +10,7 @@ import { getArticlesByPillar } from '../../utils/dataUtils';
 import { getIconByPillar } from '../../utils/iconUtils';
 import { Article } from '../../utils/types';
 import { IconType } from 'react-icons';
+import GoBackButton from '../GoBackButton/GoBackButton'; // Import the new component
 
 const PillarArticlesSection: React.FC = () => {
     const [articles, setArticles] = useState<Article[]>([]);
@@ -37,9 +38,7 @@ const PillarArticlesSection: React.FC = () => {
             <Container>
                 <Row>
                     <Col lg="12">
-                        <Button color="link" onClick={handleGoBack} className="go-back-button">
-                            <FaArrowLeft /> Go Back
-                        </Button>
+                        <GoBackButton handleGoBack={handleGoBack} /> {/* Use the new component */}
                         <div className="hero-button">
                             <div className="icon-background">
                                 {IconComponent && <IconComponent className="button-icon" />}

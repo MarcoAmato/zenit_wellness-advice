@@ -6,9 +6,10 @@ import "./ArticleDetails.css";
 import { Col, Container, Row, Card, CardBody, CardTitle, CardText } from 'reactstrap';
 import SourceList from '../ArticleDetails/SourceList';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { getArticleById, getPillarByArticleId, getPillarKeyByValue } from '../../utils/dataUtils';
 import { getIconByPillar } from '../../utils/iconUtils';
+import GoBackButton from '../GoBackButton/GoBackButton'; // Import the new component
 
 const ArticleDetails: React.FC = () => {
     const location = useLocation();
@@ -18,6 +19,11 @@ const ArticleDetails: React.FC = () => {
     const pillar = getPillarByArticleId(id);
     const pillarKey = getPillarKeyByValue(pillar || '');
     const IconComponent = getIconByPillar(pillarKey || '');
+
+    const navigate = useNavigate();
+    const handleGoBack = () => {
+        navigate(-1);
+    };
 
     if (!article) {
         return (
@@ -41,6 +47,7 @@ const ArticleDetails: React.FC = () => {
             <Container>
                 <Row>
                     <Col lg="12">
+                        <GoBackButton handleGoBack={handleGoBack} /> {/* Use the new component */}
                         <div className="hero-button">
                             <div className="icon-background"><IconComponent className="button-icon" /></div>
                             <p className='bold'>{pillar}</p>
