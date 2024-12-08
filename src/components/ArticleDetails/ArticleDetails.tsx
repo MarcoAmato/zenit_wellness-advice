@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaQuestion, FaExternalLinkAlt } from 'react-icons/fa';
 import '../Style.css';
 import '../CommonStyles.css';
@@ -10,6 +10,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { getArticleById, getPillarByArticleId, getPillarKeyByValue } from '../../utils/dataUtils';
 import { getIconByPillar } from '../../utils/iconUtils';
 import GoBackButton from '../GoBackButton/GoBackButton'; // Import the new component
+import { useLoading } from '../../utils/LoadingContext/LoadingContext';
 
 const ArticleDetails: React.FC = () => {
     const location = useLocation();
@@ -19,11 +20,16 @@ const ArticleDetails: React.FC = () => {
     const pillar = getPillarByArticleId(id);
     const pillarKey = getPillarKeyByValue(pillar || '');
     const IconComponent = getIconByPillar(pillarKey || '');
+    const {setIsLoading} = useLoading();
 
     const navigate = useNavigate();
     const handleGoBack = () => {
         navigate(-1);
     };
+
+    useEffect(() => {
+        setIsLoading(false); // Set loading to false at the end of useEffect
+    }, [setIsLoading]);
 
     if (!article) {
         return (

@@ -11,12 +11,14 @@ import { getIconByPillar } from '../../utils/iconUtils';
 import { Article } from '../../utils/types';
 import { IconType } from 'react-icons';
 import GoBackButton from '../GoBackButton/GoBackButton'; // Import the new component
+import { useLoading } from '../../utils/LoadingContext/LoadingContext';
 
 const PillarArticlesSection: React.FC = () => {
     const [articles, setArticles] = useState<Article[]>([]);
     const [displayName, setDisplayName] = useState<string>('Nutrition');
     const [IconComponent, setIconComponent] = useState<IconType>(() => FaQuestion);
     const location = useLocation();
+    const {setIsLoading} = useLoading();
 
     const navigate = useNavigate();
     const handleGoBack = () => {
@@ -31,7 +33,8 @@ const PillarArticlesSection: React.FC = () => {
         setArticles(articles);
         setDisplayName(displayName);
         setIconComponent(() => getIconByPillar(pillarParam));
-    }, [location]);
+        setIsLoading(false);
+    }, [location, setIsLoading]);
 
     return (
         <section className="pillar-articles-section">

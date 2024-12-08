@@ -6,17 +6,15 @@ import PillarSelectionSection from '../PillarSelection';
 import PillarArticlesSection from '../PillarArticlesSection/PillarArticlesSection';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
 import Loader from '../Loader/Loader';
+import { useLoading } from '../../utils/LoadingContext/LoadingContext';
 
 const AppContent: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const {isLoading, setIsLoading} = useLoading();
   const location = useLocation();
 
   useEffect(() => {
-    setIsLoading(true);
-    const timeout = setTimeout(() => setIsLoading(false), 1000); // Simulate a delay
-
-    return () => clearTimeout(timeout); // Clear the timeout
-  }, [location.pathname]);
+    setIsLoading(false);
+  }, [location.pathname, setIsLoading]);
 
   return (
     <div className="App">

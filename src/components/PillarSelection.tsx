@@ -1,12 +1,21 @@
 // src/components/HeroSection.tsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaRunning, FaAppleAlt, FaBed, FaBrain, FaUsers, FaSmile, FaUserFriends, FaTools } from 'react-icons/fa';
 import './Style.css';
 import { Col, Container, Row } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+import { useLoading } from '../utils/LoadingContext/LoadingContext';
 
 const PillarSelectionSection: React.FC = () => {
+  const { setIsLoading } = useLoading();
+
+  useEffect(() => {
+    console.log('PillarSelectionSection is loading');
+    setIsLoading(false);
+    console.log('Loading status: ', setIsLoading);
+  }, [setIsLoading]);
+
   return (
     <section className="hero-section">
       {/* Main buttons */}
