@@ -6,7 +6,7 @@ import '../CommonStyles.css'; // Import the common styles
 import { Col, Container, Row, Card, CardBody, CardTitle, CardText, Button } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { getArticlesByPillar } from '../../utils/dataUtils';
+import { getArticlesByPillar, getColorByPillar } from '../../utils/dataUtils';
 import { getIconByPillar } from '../../utils/iconUtils';
 import { Article } from '../../utils/types';
 import { IconType } from 'react-icons';
@@ -17,6 +17,7 @@ const PillarArticlesSection: React.FC = () => {
     const [articles, setArticles] = useState<Article[]>([]);
     const [displayName, setDisplayName] = useState<string>('Nutrition');
     const [IconComponent, setIconComponent] = useState<IconType>(() => FaQuestion);
+    const [iconColor, setIconColor] = useState<string>('#000000'); // Default to black
     const location = useLocation();
     const {setIsLoading} = useLoading();
 
@@ -33,6 +34,9 @@ const PillarArticlesSection: React.FC = () => {
         setArticles(articles);
         setDisplayName(displayName);
         setIconComponent(() => getIconByPillar(pillarParam));
+        const pillarColor = getColorByPillar(pillarParam).toLowerCase(); // Ensure the color is in lowercase
+        console.log(`Setting icon color to: ${pillarColor}`);
+        setIconColor(pillarColor);
         setIsLoading(false);
     }, [location, setIsLoading]);
 
@@ -43,7 +47,7 @@ const PillarArticlesSection: React.FC = () => {
                     <Col lg="12">
                         <GoBackButton handleGoBack={handleGoBack} /> {/* Use the new component */}
                         <div className="hero-button">
-                            <div className="icon-background">
+                            <div className="icon-background" style={{backgroundColor: iconColor}}>
                                 {IconComponent && <IconComponent className="button-icon" />}
                             </div>
                             <p className='bold'>{displayName}</p>

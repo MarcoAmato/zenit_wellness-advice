@@ -1,11 +1,13 @@
+// src/components/HeroSection.tsx
 import React, { useEffect, useState } from 'react';
 import { FaRunning, FaAppleAlt, FaBed, FaBrain, FaUsers, FaSmile, FaTools, FaQuestion } from 'react-icons/fa';
+import '../Style.css';
 import './PillarSelection.css';
-import { Col, Container, Row } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useLoading } from '../utils/LoadingContext/LoadingContext';
-import { getAvailablePillars, getDisplyNameByPillar } from '../utils/dataUtils';
-import PillarCard from './PillarSelection/PillarCard';
+import { useLoading } from '../../utils/LoadingContext/LoadingContext';
+import { getDisplyNameByPillar, getAvailablePillars } from '../../utils/dataUtils';
+import PillarCard from './PillarCard';
 
 const pillarIcons: { [key: string]: React.ElementType } = {
   'nutrition': FaAppleAlt,

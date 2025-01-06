@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import PillarSelectionSection from '../PillarSelection';
+import PillarSelectionSection from '../PillarSelection/PillarSelection';
 import PillarArticlesSection from '../PillarArticlesSection/PillarArticlesSection';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
 import Loader from '../Loader/Loader';

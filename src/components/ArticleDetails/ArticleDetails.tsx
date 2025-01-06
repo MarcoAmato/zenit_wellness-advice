@@ -7,7 +7,7 @@ import { Col, Container, Row, Card, CardBody, CardTitle, CardText } from 'reacts
 import SourceList from '../ArticleDetails/SourceList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { getArticleById, getPillarByArticleId, getPillarKeyByValue } from '../../utils/dataUtils';
+import { getArticleById, getDisplyNameByPillar, getPillarByArticleId, getColorByPillar } from '../../utils/dataUtils';
 import { getIconByPillar } from '../../utils/iconUtils';
 import GoBackButton from '../GoBackButton/GoBackButton'; // Import the new component
 import { useLoading } from '../../utils/LoadingContext/LoadingContext';
@@ -18,8 +18,9 @@ const ArticleDetails: React.FC = () => {
     const id = parseInt(params.get('id') || "-1");
     const article = getArticleById(id);
     const pillar = getPillarByArticleId(id);
-    const pillarKey = getPillarKeyByValue(pillar || '');
-    const IconComponent = getIconByPillar(pillarKey || '');
+    const pillarDisplayName = getDisplyNameByPillar(pillar || '');
+    const iconColor = getColorByPillar(pillar || '').toLowerCase();
+    const IconComponent = getIconByPillar(pillar || '');
     const {setIsLoading} = useLoading();
 
     const navigate = useNavigate();
@@ -55,8 +56,10 @@ const ArticleDetails: React.FC = () => {
                     <Col lg="12">
                         <GoBackButton handleGoBack={handleGoBack} /> {/* Use the new component */}
                         <div className="hero-button">
-                            <div className="icon-background"><IconComponent className="button-icon" /></div>
-                            <p className='bold'>{pillar}</p>
+                            <div className="icon-background"  style={{ backgroundColor: iconColor }}>
+                                <IconComponent className="button-icon" />
+                            </div>
+                            <p className='bold'>{pillarDisplayName}</p>
                         </div>
                     </Col>
                     <Col className='marginCol' lg="12">

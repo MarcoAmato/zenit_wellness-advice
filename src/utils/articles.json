@@ -1,7 +1,7 @@
 {
     "sections": [
       {
-        "name": "Sport",
+        "name": "exercise",
         "articles": [
           {
             "id": 1,
@@ -61,7 +61,7 @@
         ]
       },
       {
-        "name": "Nutrition",
+        "name": "nutrition",
         "articles": [
           {
             "id": 6,
@@ -154,7 +154,7 @@
         ]
       },
       {
-        "name": "Sleep",
+        "name": "sleep",
         "articles": [
           {
             "id": 14,
@@ -225,7 +225,7 @@
         ]
       },
       {
-        "name": "Social Relationships",
+        "name": "social-connections",
         "articles": [
           {
             "id": 20,
@@ -285,7 +285,7 @@
         ]
       },
       {
-        "name": "Mindset",
+        "name": "mindset",
         "articles": [
           {
             "id": 25,
@@ -384,7 +384,7 @@
         ]        
       },
       {
-        "name": "Stress Management",
+        "name": "stress-management",
         "articles": [
           {
             "id": 31,

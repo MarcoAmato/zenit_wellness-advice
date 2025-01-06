@@ -4,19 +4,19 @@ import { Article, ArticlesData } from './types';
 
 const data: ArticlesData = articlesData;
 
-// Mapping of frontend pillar names to JSON pillar names
-const pillarNameMap: { [key: string]: string } = {
-  'nutrition': 'Nutrition',
-  'exercise': 'Sport',
-  'sleep': 'Sleep',
-  'mindset': 'Mindset',
-  'social-connections': 'Social Relationships',
-  'stress-management': 'Stress Management',
-  'expert-services': 'Expert Services'
+// Mapping of frontend pillar names to JSON pillar names and colors
+const pillarNameMap: { [key: string]: { name: string, color: string } } = {
+  'nutrition': { name: 'Nutrition', color: '#4CAF50' }, // Green
+  'exercise': { name: 'Sport', color: '#FF9800' }, // Orange
+  'sleep': { name: 'Sleep', color: '#2196F3' }, // Blue
+  'mindset': { name: 'Mindset', color: '#FFC107' }, // Yellow
+  'social-connections': { name: 'Social Relationships', color: '#E91E63' }, // Pink
+  'stress-management': { name: 'Stress Management', color: '#F44336' }, // Red
+  'expert-services': { name: 'Expert Services', color: '#9E9E9E' } // Default color
 };
 
 export const getPillarKeyByValue = (value: string): string | undefined => {
-  return Object.keys(pillarNameMap).find(key => pillarNameMap[key] === value);
+  return Object.keys(pillarNameMap).find(key => pillarNameMap[key].name === value);
 };
 
 /**
@@ -36,20 +36,49 @@ export const getAvailablePillars = (): string[] => {
  * @returns Articles for the given pillar and the pillar's display name
  */
 export const getArticlesByPillar = (pillar: string): { articles: Article[], displayName: string } => {
-  const jsonPillarName = pillarNameMap[pillar.toLowerCase()];
-  if (!jsonPillarName) {
-    console.error(`No mapping found for pillar: ${pillar}`);
-    console.error(`Available pillars: ${Object.keys(pillarNameMap).join(', ')}`);
-    return { articles: [], displayName: '' };
-  }
-  const section = data.sections.find(section => section.name === jsonPillarName);
+  const section = data.sections.find(section => section.name === pillar);
   if (!section) {
     console.error(`No articles found for pillar: ${pillar}`);
     console.error(`Available pillars: ${getAvailablePillars().join(', ')}`);
     return { articles: [], displayName: '' };
   }
-  return { articles: section.articles, displayName: section.name };
+  const displayName = pillarNameMap[section.name].name;
+  console.log(`Found ${section.articles.length} articles for pillar: ${displayName}`);
+  return { articles: section.articles, displayName: pillarNameMap[section.name].name };
 };
+
+/**
+ * Get the color associated with a given pillar.
+ * 
+ * @param pillar Kind of article to retrieve
+ * @returns Color for the given pillar
+ */
+export const getColorByPillar = (pillar: string): string => {
+  const pillarData = pillarNameMap[pillar.toLowerCase()];
+  if (!pillarData) {
+    console.error(`No mapping found for pillar: ${pillar}`);
+    console.error(`Available pillars: ${Object.keys(pillarNameMap).join(', ')}`);
+    return '#000000'; // Default to black if no color is found
+  }
+  return pillarData.color;
+};
+
+/**
+ * Get the display name associated with a given pillar.
+ * 
+ * @param pillar Kind of article to retrieve
+ * @returns Display name for the given pillar
+ */
+export const getDisplyNameByPillar = (pillar: string): string => {
+  const pillarData = pillarNameMap[pillar.toLowerCase()];
+  if (!pillarData) {
+    console.error(`No mapping found for pillar: ${pillar}`);
+    console.error(`Available pillars: ${Object.keys(pillarNameMap).join(', ')}`);
+    return 'Unknown'; // Default to 'Unknown' if no display name is found
+  }
+  console.log(`Display name for pillar: ${pillar} is ${pillarData.name}`);
+  return pillarData.name;
+}
 
 /**
  * Get an article by its ID.
