@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/zenit_wellness-advice/static/css/main.15352df6.css",
+    "main.js": "/zenit_wellness-advice/static/js/main.dca7ee03.js",
+    "static/js/453.41553051.chunk.js": "/zenit_wellness-advice/static/js/453.41553051.chunk.js",
+    "index.html": "/zenit_wellness-advice/index.html",
+    "main.15352df6.css.map": "/zenit_wellness-advice/static/css/main.15352df6.css.map",
+    "main.dca7ee03.js.map": "/zenit_wellness-advice/static/js/main.dca7ee03.js.map",
+    "453.41553051.chunk.js.map": "/zenit_wellness-advice/static/js/453.41553051.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15352df6.css",
+    "static/js/main.dca7ee03.js"
+  ]
+}
