@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.15352df6.css",
-    "main.js": "/static/js/main.a16c50f8.js",
-    "static/js/453.41553051.chunk.js": "/static/js/453.41553051.chunk.js",
-    "index.html": "/index.html",
-    "main.15352df6.css.map": "/static/css/main.15352df6.css.map",
-    "main.a16c50f8.js.map": "/static/js/main.a16c50f8.js.map",
-    "453.41553051.chunk.js.map": "/static/js/453.41553051.chunk.js.map"
+    "main.css": "/zenit_wellness-advice/static/css/main.15352df6.css",
+    "main.js": "/zenit_wellness-advice/static/js/main.dca7ee03.js",
+    "static/js/453.41553051.chunk.js": "/zenit_wellness-advice/static/js/453.41553051.chunk.js",
+    "index.html": "/zenit_wellness-advice/index.html",
+    "main.15352df6.css.map": "/zenit_wellness-advice/static/css/main.15352df6.css.map",
+    "main.dca7ee03.js.map": "/zenit_wellness-advice/static/js/main.dca7ee03.js.map",
+    "453.41553051.chunk.js.map": "/zenit_wellness-advice/static/js/453.41553051.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.15352df6.css",
-    "static/js/main.a16c50f8.js"
+    "static/js/main.dca7ee03.js"
   ]
 }
