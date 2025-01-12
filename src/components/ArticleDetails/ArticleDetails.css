@@ -1,0 +1,133 @@
+.sources-container {
+    margin-top: 20px;
+}
+
+.sources-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #4CAF50; /* Highlight with Zenit's primary green color */
+}
+
+.sources-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.source-card {
+    background: #ffffff; /* White background for card */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 15px;
+    flex: 1 1 calc(33.33% - 15px); /* Responsive grid (3 items per row) */
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.source-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.source-icon {
+    font-size: 1.8em;
+    color: #4CAF50;
+    flex-shrink: 0;
+}
+
+.source-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.source-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.source-link:hover {
+    color: #4CAF50; /* Highlight Zenit green on hover */
+}
+
+.source-description {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .source-card {
+        flex: 1 1 calc(50% - 15px); /* 2 items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .source-card {
+        flex: 1 1 100%; /* Stack items on small screens */
+    }
+}
+
+.specific-section {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+}
+
+.hero-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.icon-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #4caf50;
+    border-radius: 50%;
+}
+
+.button-icon {
+    color: #fff;
+    font-size: 30px;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.article-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.article-card .card-body {
+    padding: 20px;
+}
+
+.article-card .card-text {
+    font-size: 1em;
+    color: #666;
+}
+
+.marginCol {
+    margin-bottom: 20px;
+}

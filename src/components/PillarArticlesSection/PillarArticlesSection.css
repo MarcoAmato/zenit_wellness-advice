@@ -1,0 +1,197 @@
+/* PillarArticlesSection.css */
+
+.pillar-articles-section {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+}
+
+.hero-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.icon-container {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+}
+
+.icon-background {
+    width: 50px;
+    /* Adjusted size */
+    height: 50px;
+    /* Adjusted size */
+    border-radius: 50%;
+}
+
+.go-back-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.go-back-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    text-decoration: none !important;
+}
+
+
+
+.go-back-button:hover {
+    text-decoration: underline;
+}
+
+.button-icon {
+    color: #fff;
+    font-size: 24px;
+    /* Consistent size */
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 1.2em;
+    /* Adjusted size */
+    color: #333;
+}
+
+.pillar-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pillar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buttonArticle {
+    background-color: #4caf50;
+    border: none;
+}
+.buttonArticle:hover {
+    background-color: #318d34;
+    border: none;
+}
+
+.pillar-card .card-body {
+    padding: 20px;
+}
+
+/* .pillar-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.pillar-card .card-title-container {
+    flex: 1;
+}
+
+
+.pillar-card .card-title {
+    font-size: 1.5em;
+    /* Adjusted size */
+    line-height: 1.2;
+    /* Adjusted line height for better readability */
+}
+
+.pillar-card .card-text {
+    font-size: 1em;
+    /* Adjusted size */
+    color: #666;
+}
+
+.pillar-card .card-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.marginCol {
+    margin-bottom: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .hero-button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon-background {
+        width: 40px;
+        /* Adjusted size for mobile */
+        height: 40px;
+        /* Adjusted size for mobile */
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .button-icon {
+        font-size: 20px;
+        /* Adjusted size for mobile */
+    }
+
+    .bold {
+        font-size: 1em;
+        /* Adjusted size for mobile */
+    }
+
+    .pillar-card .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pillar-card .card-title-container {
+        width: 100%;
+    }
+
+    .pillar-card .card-title {
+        font-size: 1.2em;
+        /* Adjusted size for mobile */
+        line-height: 1.2;
+        /* Adjusted line height for better readability */
+    }
+
+    .pillar-card .card-text {
+        font-size: 0.9em;
+        /* Adjusted size for mobile */
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 992px) {
+
+    .pillar-card .card-title {
+        font-size: 1.2em;
+        /* Smaller font size for desktop */
+    }
+
+    .pillar-card .card-text {
+        font-size: 0.9em;
+        /* Smaller font size for desktop */
+    }
+
+    .button-icon {
+        font-size: 18px;
+        /* Smaller icon size for desktop */
+    }
+}
